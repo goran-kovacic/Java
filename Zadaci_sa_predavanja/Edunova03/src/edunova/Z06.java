@@ -12,9 +12,9 @@ public class Z06 {
 			return;
 			}
 		
-		int prva = Integer.parseInt(Integer.toString(i).substring(0,1));
+		int prvaZnamenka = Integer.parseInt(Integer.toString(i).substring(0,1));
 		
-		System.out.println(prva);
+		System.out.println(prvaZnamenka);
 		
 	}
 
