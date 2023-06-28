@@ -62,7 +62,7 @@ public class Tablica2 {
 //		System.out.println(formatirano);
 	
 		for (int i=0;i<b*4+5;i++) {
-			if(i*3+ime.length()<(b*4+5)) {
+			if(i*3+ime.length()<(b*4+3)) {
 				System.out.print(":  ");
 			}
 		
