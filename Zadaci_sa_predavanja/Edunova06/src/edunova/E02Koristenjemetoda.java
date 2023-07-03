@@ -5,6 +5,10 @@ public class E02Koristenjemetoda {
 		
 		E01Metode.tip1();
 		
+		
+		Pomocno p = new Pomocno();
+		
+		System.out.println(Pomocno.valjanOIB("12345678912"));
 	}
 
 }
