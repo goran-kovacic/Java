@@ -20,8 +20,10 @@ boolean dev = false;
 		int rowmin = 1, colmin=1;
 		
 		
-		while(val<=(row*column)) {
+//		while(val<=(row*column)) {
 			
+		for (int a=val;a<=(row*column);a++) {
+		
 			for(int i=colmin;i<=colmax;i++) {
 				table[row-rowmin][column-i]=val++;
 			}
