@@ -8,8 +8,17 @@ public static void main(String[] args) {
 	{2,6,789},
 	{3,5,4}
 	
+	
+	
 };
 	
+	//System.out.println(Pomocno.ucitajbroj("ucitaj broj", "greska"));
+	
+	niz[1][2]=7;
+	
 Pomocno.ispisiTablicu(niz);	
+
+
+
 }
 }
