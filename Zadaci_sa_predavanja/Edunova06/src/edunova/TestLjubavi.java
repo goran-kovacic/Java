@@ -7,13 +7,12 @@ import javax.swing.JOptionPane;
 public class TestLjubavi {
 	public static void main(String[] args) {
 
-		boolean dev = false;
+		boolean dev = true;
 
 		String name1 = dev ? "Marta" : JOptionPane.showInputDialog("unesi ime 1");
 
 		String name2 = dev ? "Manuel" : JOptionPane.showInputDialog("unesi ime 2");
 
-		// String name3 = name1.concat(name2);
 
 		String name = name1.toLowerCase() + name2.toLowerCase(); // name1name2
 
@@ -55,10 +54,11 @@ public class TestLjubavi {
 		}
 
 		int[] newArray = new int[array1.length % 2 == 0 ? array1.length / 2 : array1.length / 2 + 1];
-
+		
 		for (int i = 0, j = array1.length - 1; i <= j; i++, j--) {
 
 			newArray[i] += (i != j ? array1[i] + array1[j] : array1[i]);
+			
 
 		}
 		System.out.println(Arrays.toString(newArray));
