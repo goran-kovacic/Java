@@ -60,7 +60,7 @@ public class TestLjubavi {
 			}
 		}
 
-		//int[] newArray = new int[array1.length % 2 == 0 ? array1.length / 2 : array1.length / 2 + 1];
+
 		
 		int[] newArray =  new int[initialArray.length % 2 == 0 ? initialArray.length / 2 : initialArray.length / 2 + 1];
 		
