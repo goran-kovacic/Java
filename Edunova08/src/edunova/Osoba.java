@@ -2,8 +2,10 @@ package edunova;
 
 import java.util.Objects;
 
-public class Osoba extends Object {
+public abstract class Osoba extends Object {
 
+	public abstract String pozdravi();
+	
 	private int sifra;
 	private String ime;
 	private String prezime;
