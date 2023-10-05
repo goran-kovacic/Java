@@ -1,5 +1,7 @@
 package printApp.model;
 
+import java.util.List;
+
 public class Material extends Entity {
 	
 	private String materialName;
@@ -15,6 +17,7 @@ public class Material extends Entity {
 	private float retractSpeed;
 	private float bottomRetractSpeed;
 	private float lightOffDelay;
+	private List<PrintJob> printJobs;
 	
 	
 	
@@ -95,6 +98,12 @@ public class Material extends Entity {
 	}
 	public void setLightOffDelay(float lightOffDelay) {
 		this.lightOffDelay = lightOffDelay;
+	}
+	public List<PrintJob> getPrintJobs() {
+		return printJobs;
+	}
+	public void setPrintJobs(List<PrintJob> printJobs) {
+		this.printJobs = printJobs;
 	}
 	
 	

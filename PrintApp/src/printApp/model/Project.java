@@ -2,6 +2,7 @@ package printApp.model;
 
 import java.sql.Time;
 import java.util.Date;
+import java.util.List;
 
 public class Project extends Entity{
 	
@@ -13,8 +14,29 @@ public class Project extends Entity{
 	private int totalPrintCount;
 	private float totalCost;
 	private String projectDescription;
+	private User user;
+	private List<PrintObject> printObjects;
 	
 	
+	
+	public Project(int id, String projectName, Date creationDate, Date completionDate, boolean isCompleted,
+			Time totalPrintTime, int totalPrintCount, float totalCost, String projectDescription, User user,
+			List<PrintObject> printObjects) {
+		super(id);
+		this.projectName = projectName;
+		this.creationDate = creationDate;
+		this.completionDate = completionDate;
+		this.isCompleted = isCompleted;
+		this.totalPrintTime = totalPrintTime;
+		this.totalPrintCount = totalPrintCount;
+		this.totalCost = totalCost;
+		this.projectDescription = projectDescription;
+		this.user = user;
+		this.printObjects = printObjects;
+	}
+	public Project() {
+		super();
+	}
 	public String getProjectName() {
 		return projectName;
 	}
@@ -62,6 +84,18 @@ public class Project extends Entity{
 	}
 	public void setProjectDescription(String projectDescription) {
 		this.projectDescription = projectDescription;
+	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
+	public List<PrintObject> getPrintObjects() {
+		return printObjects;
+	}
+	public void setPrintObjects(List<PrintObject> printObjects) {
+		this.printObjects = printObjects;
 	}
 	
 	

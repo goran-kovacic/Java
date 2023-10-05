@@ -1,6 +1,7 @@
 package printApp.model;
 
 import java.sql.Time;
+import java.util.List;
 
 public class Printer extends Entity{
 	
@@ -8,6 +9,7 @@ public class Printer extends Entity{
 	private String manufacturer;
 	private Time printerTime;
 	private int fepCount;
+	private List<PrintJob> printJobs;
 	
 	
 	
@@ -34,6 +36,12 @@ public class Printer extends Entity{
 	}
 	public void setFepCount(int fepCount) {
 		this.fepCount = fepCount;
+	}
+	public List<PrintJob> getPrintJobs() {
+		return printJobs;
+	}
+	public void setPrintJobs(List<PrintJob> printJobs) {
+		this.printJobs = printJobs;
 	}
 	
 	
