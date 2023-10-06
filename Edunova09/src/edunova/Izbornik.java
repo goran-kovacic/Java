@@ -6,11 +6,13 @@ public class Izbornik {
 	
 	private ObradaSmjer obradaSmjer;
 	private ObradaPolaznik obradaPolaznik;
+	private ObradaGrupa obradaGrupa;
 	
 
 	public Izbornik() {
 		obradaSmjer = new ObradaSmjer();
 		obradaPolaznik = new ObradaPolaznik();
+		obradaGrupa = new ObradaGrupa();
 		Pomocno.ulaz = new Scanner(System.in);
 		pozdravnaPoruka();
 		prikaziIzbornik();
@@ -56,7 +58,7 @@ public class Izbornik {
 			break;
 			
 		case 4:
-			System.out.println("Grupe");
+			obradaGrupa.prikaziIzbornik();
 			prikaziIzbornik();
 			break;
 			

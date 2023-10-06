@@ -15,13 +15,13 @@ public class Project extends Entity{
 	private float totalCost;
 	private String projectDescription;
 	private User user;
-	private List<PrintObject> printObjects;
+	private List<Part> parts;
 	
 	
 	
 	public Project(int id, String projectName, Date creationDate, Date completionDate, boolean isCompleted,
 			Time totalPrintTime, int totalPrintCount, float totalCost, String projectDescription, User user,
-			List<PrintObject> printObjects) {
+			List<Part> parts) {
 		super(id);
 		this.projectName = projectName;
 		this.creationDate = creationDate;
@@ -32,7 +32,7 @@ public class Project extends Entity{
 		this.totalCost = totalCost;
 		this.projectDescription = projectDescription;
 		this.user = user;
-		this.printObjects = printObjects;
+		this.setParts(parts);
 	}
 	public Project() {
 		super();
@@ -91,11 +91,11 @@ public class Project extends Entity{
 	public void setUser(User user) {
 		this.user = user;
 	}
-	public List<PrintObject> getPrintObjects() {
-		return printObjects;
+	public List<Part> getParts() {
+		return parts;
 	}
-	public void setPrintObjects(List<PrintObject> printObjects) {
-		this.printObjects = printObjects;
+	public void setParts(List<Part> parts) {
+		this.parts = parts;
 	}
 	
 	

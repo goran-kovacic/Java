@@ -6,12 +6,12 @@ public class Menu {
 
 	private ProjectsController projectsController;
 	
-	private PrintObjectsController printObjectsController;
+	private PartsController partsController;
 	
 	public Menu() {
 		
 		projectsController = new ProjectsController();
-		printObjectsController = new PrintObjectsController();
+		partsController = new PartsController();
 		Helper.input = new Scanner(System.in);
 
 		menuMessage();
@@ -33,7 +33,7 @@ public class Menu {
 
 		System.out.println("***** Main Menu *****\n");
 		System.out.println("1. Projects");
-		System.out.println("2. Objects");
+		System.out.println("2. Parts");
 		System.out.println("3. Jobs");
 		System.out.println("4. Printers");
 		System.out.println("5. Materials");
@@ -54,7 +54,7 @@ public class Menu {
 			break;
 		
 		case 2:
-			printObjectsController.showMenu();
+			partsController.showMenu();
 			showMenu();
 			break;
 			

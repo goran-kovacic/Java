@@ -6,7 +6,7 @@ public class PrintJob extends Entity {
 	private boolean result;
 	private Printer printer;
 	private Material material;
-	private PrintObject printObject;
+	private Part part;
 	
 	public float getCost() {
 		return cost;
@@ -32,11 +32,11 @@ public class PrintJob extends Entity {
 	public void setMaterial(Material material) {
 		this.material = material;
 	}
-	public PrintObject getPrintObject() {
-		return printObject;
+	public Part getPrintObject() {
+		return part;
 	}
-	public void setPrintObject(PrintObject printObject) {
-		this.printObject = printObject;
+	public void setPrintObject(Part part) {
+		this.part = part;
 	}
 	
 	

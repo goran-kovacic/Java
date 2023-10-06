@@ -48,7 +48,15 @@ public class ObradaPolaznik {
 	}
 
 	private void pregledPolaznika() {
-		polaznici.forEach(s->{System.out.println(s);});
+		//polaznici.forEach(s->{System.out.println(s);});
+		
+		System.out.println("---- Polaznici u aplikaciji ----");
+		int b=1;
+		for(Polaznik p : polaznici) {
+			System.out.println(b++ + ". " + p);
+			
+		}
+		System.out.println("--------------------------------");
 		
 	}
 

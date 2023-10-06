@@ -12,7 +12,7 @@ public class ObradaSmjer {
 	
 	public ObradaSmjer() {
 		smjerovi = new ArrayList<>();
-		if(Pomocno.dev) {
+		if(Pomocno.DEV) {
 			testniPodaci();
 		}
 		
@@ -53,6 +53,16 @@ public class ObradaSmjer {
 			dodavanjeSmjera();
 			prikaziIzbornik();
 			break;
+			
+		case 3:
+			promjenaSmjera();
+			prikaziIzbornik();
+			break;
+			
+		case 4:
+			brisanjeSmjera();
+			prikaziIzbornik();
+			break;
 		
 		case 5:
 			break;
@@ -62,11 +72,32 @@ public class ObradaSmjer {
 	}
 
 
-	private void pregledSmjerova() {
-		for(Smjer s : smjerovi) {
-			System.out.println(s.getNaziv());
-		}
+	private void brisanjeSmjera() {
+		pregledSmjerova();
+		int broj = Pomocno.unosRasponBroja("Odaberi redni broj smjera: ", "Greska", 1, smjerovi.size());
+		smjerovi.remove(broj-1);
 		
+	}
+
+
+	private void promjenaSmjera() {
+		pregledSmjerova();
+		int broj = Pomocno.unosRasponBroja("Odaberi redni broj smjera: ", "Greska", 1, smjerovi.size());
+		Smjer s = smjerovi.get(broj-1);
+		s.setSifra(Pomocno.unosRasponBroja("Unesi sifru smjera: (" + s.getSifra() +  "): ","Pozitivan broj",
+				1, Integer.MAX_VALUE));
+		s.setNaziv(Pomocno.unosString("Unesi naziv smjer: (" + s.getNaziv() + ") ", "naziv obavezan"));
+	}
+
+
+	private void pregledSmjerova() {
+		
+		System.out.println("------ Smjerovi u aplikaciji ------");
+		int b=1;
+		for(Smjer s : smjerovi) {
+			System.out.println(b++ + ". " + s.getNaziv());
+		}
+		System.out.println("-----------------------------------");
 	}
 
 
@@ -74,7 +105,7 @@ public class ObradaSmjer {
 		
 		Smjer s = new Smjer();
 		s.setSifra(Pomocno.unosRasponBroja("Unesi sifru smjera: ", "Pozitivan broj",
-				0, Integer.MAX_VALUE));
+				1, Integer.MAX_VALUE));
 		s.setNaziv(Pomocno.unosString("Unesi naziv smjer: ", "naziv obavezan"));
 		s.setTrajanje(Pomocno.unosRasponBroja("unesi trajanje smjera", "broj izmedju 30 i 360",
 				30, 360));

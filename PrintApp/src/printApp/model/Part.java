@@ -2,20 +2,35 @@ package printApp.model;
 
 import java.util.List;
 
-public class PrintObject extends Entity {
+public class Part extends Entity {
 	
-	private String objectName;
+	private String partName;
 	private String stlOriginal;
 	private String stlSupported;
 	private String slicedFile;
 	private Project project;
 	private List<PrintJob> printJobs;
 	
-	public String getObjectName() {
-		return objectName;
+	
+	
+	public Part(int id, String partName, String stlOriginal, String stlSupported, String slicedFile, Project project,
+			List<PrintJob> printJobs) {
+		super(id);
+		this.partName = partName;
+		this.stlOriginal = stlOriginal;
+		this.stlSupported = stlSupported;
+		this.slicedFile = slicedFile;
+		this.project = project;
+		this.printJobs = printJobs;
 	}
-	public void setObjectName(String objectName) {
-		this.objectName = objectName;
+	public Part() {
+		super();
+	}
+	public String getPartName() {
+		return partName;
+	}
+	public void setPartName(String partName) {
+		this.partName = partName;
 	}
 	public String getStlOriginal() {
 		return stlOriginal;
@@ -48,6 +63,10 @@ public class PrintObject extends Entity {
 		this.printJobs = printJobs;
 	}
 	
-	
+	@Override
+	public String toString() {
+		
+		return partName;
+	}
 
 }

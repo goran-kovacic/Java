@@ -51,6 +51,17 @@ public class ProjectsController {
 			addProject();
 			showMenu();
 			break;
+			
+		case 3:
+			editProject();
+			showMenu();
+			break;
+			
+		case 4:
+			deleteProject();
+			showMenu();
+			break;
+			
 		
 		case 5:
 				break;
@@ -61,13 +72,36 @@ public class ProjectsController {
 		
 	}
 
-	private void showProjects() {
-		System.out.println("List of existing projects: ");
+	private void deleteProject() {
+		showProjects();
+		int number = Helper.inputNumberRange("Select project number to delete: ", "Error", 1, projects.size());
 		
-		for(Project p : projects) {
-			System.out.println(p.getProjectName());
+		boolean answer = Helper.yesOrNo("Are you sure you want to delete? y/n", "Answer must be \"y\" or \"n\"");
+		
+		if (answer) {
+			projects.remove(number-1);
+			System.out.println("Project " + number + ". deleted");
 		}
 		
+	}
+
+	private void editProject() {
+		showProjects();
+		
+		int number = Helper.inputNumberRange("Select project number: ", "Error", 1, projects.size());
+		Project p = projects.get(number-1);
+		p.setId(Helper.inputNumberRange("Input project ID (" + p.getId() + "): ", "Error",
+				1, Integer.MAX_VALUE));
+		p.setProjectName(Helper.inputString("Input project name (" + p.getProjectName() + "): ","Error"));
+	}
+
+	private void showProjects() {
+		System.out.println("---- List of existing projects: ---- ");
+		int n=1;
+		for(Project p : projects) {
+			System.out.println(n++ + ". " + p.getProjectName());
+		}
+		System.out.println("-------------------------------------");
 	}
 
 	private void addProject() {
