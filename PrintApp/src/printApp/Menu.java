@@ -8,10 +8,20 @@ public class Menu {
 	
 	private PartsController partsController;
 	
+	
+	
+	public ProjectsController getProjectsController() {
+		return projectsController;
+	}
+
+	public PartsController getPartsController() {
+		return partsController;
+	}
+
 	public Menu() {
 		
 		projectsController = new ProjectsController();
-		partsController = new PartsController();
+		partsController = new PartsController(this);
 		Helper.input = new Scanner(System.in);
 
 		menuMessage();
