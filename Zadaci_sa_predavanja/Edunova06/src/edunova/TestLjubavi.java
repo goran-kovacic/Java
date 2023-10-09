@@ -12,7 +12,7 @@ public class TestLjubavi {
 
 		boolean dev = true;
 
-		String name1 = dev ? "Marta" : JOptionPane.showInputDialog("unesi ime 1");
+		String name1 = dev ? "Martaa" : JOptionPane.showInputDialog("unesi ime 1");
 
 		String name2 = dev ? "Manuel" : JOptionPane.showInputDialog("unesi ime 2");
 
@@ -39,13 +39,13 @@ public class TestLjubavi {
 		}
 
 		System.out.println();
-		System.out.println(Arrays.toString(initialArray));
+//		System.out.println(Arrays.toString(initialArray));
 
 		System.out.println(ljubav(initialArray));
 		
 		
 
-	System.out.println(Arrays.toString(getSingleDigits(132)));
+//	System.out.println(Arrays.toString(getSingleDigits(132)));
 	}
 
 	private static int ljubav(int[] initialArray) {
