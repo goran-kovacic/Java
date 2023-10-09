@@ -8,8 +8,17 @@ public class Menu {
 	
 	private PartsController partsController;
 	
+	private PrinterController printerController;
+	
+	private MaterialController materialController;
+	
+	private PrintJobController printJobController;
 	
 	
+	public PrinterController getPrinterController() {
+		return printerController;
+	}
+
 	public ProjectsController getProjectsController() {
 		return projectsController;
 	}
@@ -17,16 +26,23 @@ public class Menu {
 	public PartsController getPartsController() {
 		return partsController;
 	}
+	
+	public MaterialController getMaterialController() {
+		return materialController;
+	}
 
 	public Menu() {
 		
 		projectsController = new ProjectsController();
 		partsController = new PartsController(this);
+		printerController = new PrinterController();
+		materialController = new MaterialController();
+		printJobController = new PrintJobController(this);
 		Helper.input = new Scanner(System.in);
 
 		menuMessage();
 		showMenu();
-
+		
 		Helper.input.close();
 	}
 
@@ -47,8 +63,8 @@ public class Menu {
 		System.out.println("3. Jobs");
 		System.out.println("4. Printers");
 		System.out.println("5. Materials");
-		System.out.println("6. Users");
-		System.out.println("7. Exit");
+//		System.out.println("6. Users");
+		System.out.println("6. Exit");
 		System.out.println();
 
 		inputMenuItem();
@@ -56,7 +72,7 @@ public class Menu {
 
 	private void inputMenuItem() {
 
-		switch (Helper.inputNumberRange("Choose a menu item: ", "\n*** Must be 1 - 7 ***\n", 1, 7)) {
+		switch (Helper.inputNumberRange("Choose a menu item: ", "\n*** Must be 1 - 6 ***\n", 1, 6)) {
 
 		case 1:
 			projectsController.showMenu();
@@ -69,26 +85,21 @@ public class Menu {
 			break;
 			
 		case 3:
-			System.out.println("*** Jobs ***");
+			printJobController.showMenu();
 			showMenu();
 			break;
 		
 		case 4:
-			System.out.println("*** Printers ***");
+			printerController.showMenu();
 			showMenu();
 			break;
 			
 		case 5:
-			System.out.println("*** Materials ***");
+			materialController.showMenu();
 			showMenu();
 			break;
 			
 		case 6:
-			System.out.println("*** Users ***");
-			showMenu();
-			break;
-			
-		case 7:
 			System.out.println("*** BYE ***");
 			
 			break;

@@ -1,12 +1,12 @@
 package printApp.model;
 
-import java.util.List;
+
 
 public class User extends Entity{
 	
 	private String userName;
 	private String userPassword;
-	private List<Project> projects;
+	
 	
 	
 	public String getUserName() {
@@ -21,12 +21,7 @@ public class User extends Entity{
 	public void setUserPassword(String userPassword) {
 		this.userPassword = userPassword;
 	}
-	public List<Project> getProjects() {
-		return projects;
-	}
-	public void setProjects(List<Project> projects) {
-		this.projects = projects;
-	}
+	
 	
 	
 	

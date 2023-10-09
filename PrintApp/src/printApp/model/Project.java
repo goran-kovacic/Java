@@ -2,7 +2,7 @@ package printApp.model;
 
 import java.sql.Time;
 import java.util.Date;
-import java.util.List;
+
 
 public class Project extends Entity{
 	
@@ -14,14 +14,14 @@ public class Project extends Entity{
 	private int totalPrintCount;
 	private float totalCost;
 	private String projectDescription;
-	private User user;
-	private List<Part> parts;
+	
+	
+	
 	
 	
 	
 	public Project(int id, String projectName, Date creationDate, Date completionDate, boolean isCompleted,
-			Time totalPrintTime, int totalPrintCount, float totalCost, String projectDescription, User user,
-			List<Part> parts) {
+			Time totalPrintTime, int totalPrintCount, float totalCost, String projectDescription) {
 		super(id);
 		this.projectName = projectName;
 		this.creationDate = creationDate;
@@ -31,8 +31,7 @@ public class Project extends Entity{
 		this.totalPrintCount = totalPrintCount;
 		this.totalCost = totalCost;
 		this.projectDescription = projectDescription;
-		this.user = user;
-		this.setParts(parts);
+		
 	}
 	public Project() {
 		super();
@@ -85,19 +84,13 @@ public class Project extends Entity{
 	public void setProjectDescription(String projectDescription) {
 		this.projectDescription = projectDescription;
 	}
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
-	}
-	public List<Part> getParts() {
-		return parts;
-	}
-	public void setParts(List<Part> parts) {
-		this.parts = parts;
-	}
 	
+	
+	@Override
+	public String toString() {
+		
+		return projectName;
+	}
 	
 
 }

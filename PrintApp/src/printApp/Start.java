@@ -4,7 +4,7 @@ public class Start {
 	
 	public static void main(String[] args) {
 		
-		Helper.dev = true;
+		Helper.DEV = true;
 		new Menu();
 		
 	}

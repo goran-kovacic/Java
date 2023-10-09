@@ -1,6 +1,6 @@
 package printApp.model;
 
-import java.util.List;
+
 
 public class Part extends Entity {
 	
@@ -9,20 +9,21 @@ public class Part extends Entity {
 	private String stlSupported;
 	private String slicedFile;
 	private Project project;
-	private List<PrintJob> printJobs;
 	
 	
 	
-	public Part(int id, String partName, String stlOriginal, String stlSupported, String slicedFile, Project project,
-			List<PrintJob> printJobs) {
+	
+	
+	public Part(int id, String partName, String stlOriginal, String stlSupported, String slicedFile, Project project) {
 		super(id);
 		this.partName = partName;
 		this.stlOriginal = stlOriginal;
 		this.stlSupported = stlSupported;
 		this.slicedFile = slicedFile;
 		this.project = project;
-		this.printJobs = printJobs;
 	}
+
+	
 	public Part() {
 		super();
 	}
@@ -56,12 +57,7 @@ public class Part extends Entity {
 	public void setProject(Project project) {
 		this.project = project;
 	}
-	public List<PrintJob> getPrintJobs() {
-		return printJobs;
-	}
-	public void setPrintJobs(List<PrintJob> printJobs) {
-		this.printJobs = printJobs;
-	}
+	
 	
 	@Override
 	public String toString() {

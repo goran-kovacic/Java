@@ -9,10 +9,20 @@ public class Printer extends Entity{
 	private String manufacturer;
 	private Time printerTime;
 	private int fepCount;
-	private List<PrintJob> printJobs;
 	
 	
+	public Printer() {
+		super();
+	}
 	
+	public Printer(int id, String printerName, String manufacturer, Time printerTime, int fepCount) {
+		super(id);
+		this.printerName = printerName;
+		this.manufacturer = manufacturer;
+		this.printerTime = printerTime;
+		this.fepCount = fepCount;
+		
+	}
 	public String getPrinterName() {
 		return printerName;
 	}
@@ -37,12 +47,7 @@ public class Printer extends Entity{
 	public void setFepCount(int fepCount) {
 		this.fepCount = fepCount;
 	}
-	public List<PrintJob> getPrintJobs() {
-		return printJobs;
-	}
-	public void setPrintJobs(List<PrintJob> printJobs) {
-		this.printJobs = printJobs;
-	}
+	
 	
 	
 
