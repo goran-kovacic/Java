@@ -1,15 +1,17 @@
 package test;
 
+import java.util.Scanner;
+
 public class Test {
 	
 	public static void main(String[] args) {
 		
-		int[] a =new int[4];
-		
-		 a[1] = 4;
-		
-		System.out.println(a[1]);
-		
+			String x = "WXeIF83i";
+			
+			 
+			
+			 System.out.println(x.toUpperCase() + "  " + x.toLowerCase());
+			
 	}
 	
 }
