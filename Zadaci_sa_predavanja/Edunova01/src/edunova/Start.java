@@ -4,8 +4,6 @@
 
 package edunova;
 
-import com.github.javafaker.Faker;
-
 /**
  *
  * @author AMD
