@@ -24,6 +24,7 @@
     <mapping class="printApp.model.Printer" />
     <mapping class="printApp.model.Material" />
     <mapping class="printApp.model.PrintJob" />
+    <mapping class="printApp.model.PrintFile" />
     
   </session-factory>
 </hibernate-configuration>

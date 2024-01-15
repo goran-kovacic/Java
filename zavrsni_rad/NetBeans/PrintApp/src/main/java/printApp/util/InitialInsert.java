@@ -156,9 +156,9 @@ public class InitialInsert {
         for (int i = 0; i < NUMBER_OF_PARTS; i++) {
             p = new Part();
             p.setPartName(faker.starTrek().character());
-            p.setStlOriginal("C:\\" + faker.file().fileName());
-            p.setStlSupported("C:\\" + faker.file().fileName());
-            p.setSlicedFile("C:\\" + faker.file().fileName());
+//            p.setStlOriginal("C:\\" + faker.file().fileName());
+//            p.setStlSupported("C:\\" + faker.file().fileName());
+//            p.setSlicedFile("C:\\" + faker.file().fileName());
             p.setProject(projects.get(faker.number().numberBetween(0, NUMBER_OF_PROJECTS - 1)));
             
             //p.setCost(new BigDecimal(faker.number().numberBetween(10, 100)));

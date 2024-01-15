@@ -75,23 +75,23 @@ public class PartsFrame extends javax.swing.JFrame implements ViewInterface {
         }
         
 
-        if (txtOriginal.getText().isBlank()) {
-            e.setStlOriginal(null);
-        } else {
-            e.setStlOriginal(txtOriginal.getText());
-        }
-
-        if (txtSupported.getText().isBlank()) {
-            e.setStlSupported(null);
-        } else {
-            e.setStlSupported(txtSupported.getText());
-        }
-
-        if (txtSliced.getText().isBlank()) {
-            e.setSlicedFile(null);
-        } else {
-            e.setSlicedFile(txtSliced.getText());
-        }
+//        if (txtOriginal.getText().isBlank()) {
+//            e.setStlOriginal(null);
+//        } else {
+//            e.setStlOriginal(txtOriginal.getText());
+//        }
+//
+//        if (txtSupported.getText().isBlank()) {
+//            e.setStlSupported(null);
+//        } else {
+//            e.setStlSupported(txtSupported.getText());
+//        }
+//
+//        if (txtSliced.getText().isBlank()) {
+//            e.setSlicedFile(null);
+//        } else {
+//            e.setSlicedFile(txtSliced.getText());
+//        }
 
     }
 
@@ -104,9 +104,9 @@ public class PartsFrame extends javax.swing.JFrame implements ViewInterface {
 
         cmbProject.setSelectedItem(e.getProject());
 
-        txtOriginal.setText(e.getStlOriginal());
-        txtSupported.setText(e.getStlSupported());
-        txtSliced.setText(e.getSlicedFile());
+//        txtOriginal.setText(e.getStlOriginal());
+//        txtSupported.setText(e.getStlSupported());
+//        txtSliced.setText(e.getSlicedFile());
 
         try {
             lblPrintTime.setText(df.format(e.getPrintTime()));
