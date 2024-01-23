@@ -18,6 +18,7 @@ import printApp.controller.PrinterController;
 import printApp.controller.UserController;
 import printApp.model.Material;
 import printApp.model.Part;
+import printApp.model.PrintFile;
 import printApp.model.PrintJob;
 import printApp.model.Printer;
 import printApp.model.Project;
@@ -37,6 +38,7 @@ public class InitialInsert {
     private static final int NUMBER_OF_MATERIALS = 5;
     private static final int NUMBER_OF_PARTS = 20;
     private static final int NUMBER_OF_JOBS = 30;
+    private static final int NUMBER_OF_PRINT_FILES = 60;
 
     private Faker faker;
     private Session session;
@@ -45,6 +47,7 @@ public class InitialInsert {
     private List<Material> materials;
     private List<PrintJob> printJobs;
     private List<Part> parts;
+    private List<PrintFile> printFiles;
 
     public InitialInsert() {
 
@@ -55,6 +58,7 @@ public class InitialInsert {
         materials = new ArrayList<>();
         printJobs = new ArrayList<>();
         parts = new ArrayList<>();
+        printFiles = new ArrayList<>();
 
         session.getTransaction().begin();
 
@@ -62,6 +66,7 @@ public class InitialInsert {
         creaeteMaterials();
         createProjects();
         createParts();
+        createPrintFiles();
         createPrintJobs();
 
         //updatePrinters();
@@ -73,7 +78,23 @@ public class InitialInsert {
         setPassword();
     }
     
-    
+     private void createPrintFiles() {
+         
+         PrintFile p;
+         for(int i = 0; i<NUMBER_OF_PRINT_FILES; i++){
+             p = new PrintFile();
+             p.setFileComment(faker.lorem().paragraph(5));
+             p.setFilePath("C:\\" + faker.file().fileName());
+             p.setFileType("Test_File_Type");
+             p.setFileVersion(1);
+             p.setPart(parts.get(faker.number().numberBetween(0, NUMBER_OF_PARTS-1)));
+             session.persist(p);
+             printFiles.add(p);
+
+             
+         }
+        
+    }
 
     private void createProjects() {
         Project p;
@@ -189,5 +210,7 @@ public class InitialInsert {
         }
 
     }       
+
+   
   
 }
