@@ -6,11 +6,11 @@ public class Tablica2 {
 
 	public static void main(String[] args) {
 
-		boolean dev = false;
+		boolean dev = true;
 
-		int a = dev ? 2 : Integer.parseInt(JOptionPane.showInputDialog("unesi prvi broj"));
+		int a = dev ? 10 : Integer.parseInt(JOptionPane.showInputDialog("unesi prvi broj"));
 
-		int b = dev ? 2 : Integer.parseInt(JOptionPane.showInputDialog("unesi drugi broj"));
+		int b = dev ? 10 : Integer.parseInt(JOptionPane.showInputDialog("unesi drugi broj"));
 		
 	
 		
