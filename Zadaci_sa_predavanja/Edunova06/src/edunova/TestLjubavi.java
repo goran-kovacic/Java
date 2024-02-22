@@ -13,10 +13,7 @@ public class TestLjubavi {
 		boolean dev = true;
 
 		String name1 = dev ? "Martaa" : JOptionPane.showInputDialog("unesi ime 1");
-
 		String name2 = dev ? "Manuel" : JOptionPane.showInputDialog("unesi ime 2");
-
-
 		String name = name1.toLowerCase() + name2.toLowerCase(); // name1name2
 
 		int[] initialArray = new int[name.length()];
@@ -32,20 +29,13 @@ public class TestLjubavi {
 				if (name.charAt(j) == letter) {
 					count++;
 				}
-
 			}
 			initialArray[i] = count;
 			System.out.print(name.charAt(i) + " ");
 		}
 
 		System.out.println();
-//		System.out.println(Arrays.toString(initialArray));
-
 		System.out.println(ljubav(initialArray));
-		
-		
-
-//	System.out.println(Arrays.toString(getSingleDigits(132)));
 	}
 
 	private static int ljubav(int[] initialArray) {
@@ -59,32 +49,16 @@ public class TestLjubavi {
 				return Integer.parseInt(s);
 			}
 		}
-
-
 		
-		int[] newArray =  new int[initialArray.length % 2 == 0 ? initialArray.length / 2 : initialArray.length / 2 + 1];
-		
-		
-		
+		int[] newArray =  new int[initialArray.length % 2 == 0 ? initialArray.length / 2 : initialArray.length / 2 + 1];		
 		for(int i=0, j=initialArray.length-1; i<=j; i++, j--) {
 			newArray[i] += (i != j ? initialArray[i] + initialArray[j] : initialArray[i]);
-		
-			
-
-		}
+			}
 		
 		System.out.println(Arrays.toString(separateDoubleDigits(newArray)));
 		return ljubav(separateDoubleDigits(newArray));
-
 	}
 
-	
-	
-	
-	
-	
-	
-	
 	public static int[] separateDoubleDigits(int[] initialArray) {
 		int count = 0;	//velicina novog niza sa odvojenim znamenkama
 		
@@ -93,8 +67,7 @@ public class TestLjubavi {
 				count += countDigits(number);
 			}else {
 				count++;
-			}
-				
+			}				
 		}
 		
 		int[] separatedArray = new int[count];	//niz sa odvojenim znamenkama
@@ -139,14 +112,6 @@ public class TestLjubavi {
 			number /= 10;
 			index--;
 		}
-		
-		/*while(number>9) {				//ovo ne radi
-			digits[index]=number / 10;
-			number = number % 10;
-			if(number<10) {
-				digits[index]=number;
-			}
-		}*/
 		return digits;
 	}
 }

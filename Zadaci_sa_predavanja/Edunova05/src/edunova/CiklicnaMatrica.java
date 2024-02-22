@@ -29,22 +29,15 @@ boolean dev = false;
 			}
 			if(val>(row*column)) {
 			break;
-			}
-			
-			rowmin++;
-			
-			
-			
+			}		
+			rowmin++;		
 			
 			for(int i=rowmin;i<=rowmax;i++) {
 				table[row-i][column-colmax]=val++;
 			}
 			if(val>(row*column)) {
 				break;
-			}
-			
-			
-			
+			}			
 			
 			for(int i=colmin;i<=column-colmin;i++) {
 				table[row-rowmax][i]=val++;
@@ -52,34 +45,18 @@ boolean dev = false;
 			if(val>(row*column)) {
 				break;
 			}
-			colmax--;
-			
+			colmax--;			
 			
 			for(int i=rowmin-1;i<=row-rowmin;i++) {
 				table[i][colmax]=val++;
 			}
 			if(val>(row*column)) {
 				break;
-			}
-			
-			
-			
+			}			
 			rowmax--;
-			colmin++;
-		
-		
-		
+			colmin++;	
 		}
-		
-			
-		
-		
-		
-		
-		
-		
-		
-		
+				
 		for (int i=0;i<row;i++) {
 			for(int j=0;j<column;j++) {
 				System.out.print(table[i][j] + "\t");
