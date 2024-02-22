@@ -2,7 +2,7 @@ package nestedLoops;
 
 import java.util.Scanner;
 
-public class TriangularPatternA {
+public class TriangularPatternC {
 	
 	public static void main(String[] args) {
 		
@@ -13,11 +13,14 @@ public class TriangularPatternA {
 		
 		for (int row=1; row<=size; row++) {
 			for(int column=1; column<=size;column++) {
-				if(row>=column) {
+				if(column<row) {
+					System.out.print("  ");
+				}
+				if(row<=column) {
 					System.out.print("# ");
 				}
 			}
 			System.out.println();
-		}
+		}		
 	}
 }
