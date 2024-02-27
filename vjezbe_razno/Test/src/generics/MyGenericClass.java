@@ -1,6 +1,6 @@
 package generics;
 
-public class MyGenericClass <T, T2> {
+public class MyGenericClass <T extends Number, T2 extends Number> {
 	
 	T x;
 	T2 y;

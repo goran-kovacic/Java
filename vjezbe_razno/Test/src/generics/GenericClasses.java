@@ -12,7 +12,7 @@ public class GenericClasses {
 		System.out.println(myDouble.getValue());
 		
 		MyGenericClass<Integer, Integer> myInteger = new MyGenericClass<>(123, 321);
-		MyGenericClass<Character, Integer> myCharacter = new MyGenericClass<>('a', 321111);
+//		MyGenericClass<Character, Integer> myCharacter = new MyGenericClass<>('a', 321111);
 		
 		ArrayList<String> myString = new ArrayList<>();
 		
