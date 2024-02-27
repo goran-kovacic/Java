@@ -50,9 +50,5 @@ public class Test {
 		thread2.start();
 		
 		
-		
-	}
-	
-	
-	
+	}	
 }
