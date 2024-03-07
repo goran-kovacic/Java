@@ -16,7 +16,7 @@ public class BatchRenamer {
 
     public static void main(String[] args) {
         
-        
+        batchRename("C:\\Users\\AMD\\Desktop\\New folder");
         
     }
     
