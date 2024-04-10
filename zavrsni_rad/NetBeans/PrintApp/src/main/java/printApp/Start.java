@@ -25,7 +25,7 @@ public class Start {
 
         HibernateUtil.getSession();
 //        new InitialInsert();
-       new UpdateInserts();
+//       new UpdateInserts();
         
         new SplashScreen().setVisible(true);
 

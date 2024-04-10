@@ -14,24 +14,24 @@ public class Part extends Entitet {
 
     @Column(nullable = false)
     private String partName;
-//    private String stlOriginal;
-//    private String stlSupported;
-//    private String slicedFile;
+    private String stlOriginal;
+    private String stlSupported;
+    private String slicedFile;
     @ManyToOne
     private Project project;
     private BigDecimal cost;
     private Integer printTime;
     @OneToMany(mappedBy = "part", fetch = FetchType.EAGER)
     private List<PrintJob> printJobs;
-    @OneToMany(mappedBy = "part", fetch = FetchType.EAGER)
-    private List<PrintFile> printFiles;
+//    @OneToMany(mappedBy = "part", fetch = FetchType.EAGER)
+//    private List<PrintFile> printFiles;
 
     public Part(Integer id, String partName, String stlOriginal, String stlSupported, String slicedFile, Project project, BigDecimal cost, Integer printTime) {
         super(id);
         this.partName = partName;
-//        this.stlOriginal = stlOriginal;
-//        this.stlSupported = stlSupported;
-//        this.slicedFile = slicedFile;
+        this.stlOriginal = stlOriginal;
+        this.stlSupported = stlSupported;
+        this.slicedFile = slicedFile;
         this.project = project;
         this.cost = cost;
         this.printTime = printTime;
@@ -48,9 +48,9 @@ public class Part extends Entitet {
         return printJobs;
     }
 
-    public List<PrintFile> getPrintFiles() {
-        return printFiles;
-    }
+//    public List<PrintFile> getPrintFiles() {
+//        return printFiles;
+//    }
 
     
     
@@ -62,29 +62,29 @@ public class Part extends Entitet {
         this.partName = partName;
     }
 
-//    public String getStlOriginal() {
-//        return stlOriginal;
-//    }
-//
-//    public void setStlOriginal(String stlOriginal) {
-//        this.stlOriginal = stlOriginal;
-//    }
-//
-//    public String getStlSupported() {
-//        return stlSupported;
-//    }
-//
-//    public void setStlSupported(String stlSupported) {
-//        this.stlSupported = stlSupported;
-//    }
-//
-//    public String getSlicedFile() {
-//        return slicedFile;
-//    }
-//
-//    public void setSlicedFile(String slicedFile) {
-//        this.slicedFile = slicedFile;
-//    }
+    public String getStlOriginal() {
+        return stlOriginal;
+    }
+
+    public void setStlOriginal(String stlOriginal) {
+        this.stlOriginal = stlOriginal;
+    }
+
+    public String getStlSupported() {
+        return stlSupported;
+    }
+
+    public void setStlSupported(String stlSupported) {
+        this.stlSupported = stlSupported;
+    }
+
+    public String getSlicedFile() {
+        return slicedFile;
+    }
+
+    public void setSlicedFile(String slicedFile) {
+        this.slicedFile = slicedFile;
+    }
 
     public Project getProject() {
         return project;

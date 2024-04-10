@@ -36,17 +36,17 @@ public class PartController extends Controller<Part> {
     protected void controlCreate() throws PrintAppException {
         controlName();
         appendName();
-//        controlStlOriginal();
-//        controlStlSupported();
-//        controlSlicedFile();
+        controlStlOriginal();
+        controlStlSupported();
+        controlSlicedFile();
     }
 
     @Override
     protected void controlUpdate() throws PrintAppException {
         controlName();
-//        controlStlOriginal();
-//        controlStlSupported();
-//        controlSlicedFile();
+        controlStlOriginal();
+        controlStlSupported();
+        controlSlicedFile();
     }
 
     @Override
@@ -100,54 +100,54 @@ public class PartController extends Controller<Part> {
         }
     }
 
-//    private void controlStlOriginal() throws PrintAppException {
-//
-//        if (entitet.getStlOriginal() == null) {
-//            return;
-//        }
-//
-//        try {
-//            Path p = Paths.get(entitet.getStlOriginal());
-//
-//            if (!p.isAbsolute() || p.toFile().isDirectory()) {
-//                throw new PrintAppException("Not a valid file path!");
-//            }
-//        } catch (NullPointerException e) {
-//        }
-//
-//    }
-//
-//    private void controlStlSupported() throws PrintAppException {
-//
-//        if (entitet.getStlSupported() == null) {
-//            return;
-//        }
-//
-//        try {
-//            Path p = Paths.get(entitet.getStlSupported());
-//
-//            if (!p.isAbsolute() || p.toFile().isDirectory()) {
-//                throw new PrintAppException("Not a valid file path!");
-//            }
-//        } catch (NullPointerException e) {
-//        }
-//    }
-//
-//    private void controlSlicedFile() throws PrintAppException {
-//
-//        if (entitet.getSlicedFile() == null) {
-//            return;
-//        }
-//
-//        try {
-//            Path p = Paths.get(entitet.getSlicedFile());
-//
-//            if (!p.isAbsolute() || p.toFile().isDirectory()) {
-//                throw new PrintAppException("Not a valid file path!");
-//            }
-//        } catch (NullPointerException e) {
-//        }
-//
-//    }
+    private void controlStlOriginal() throws PrintAppException {
+
+        if (entitet.getStlOriginal() == null) {
+            return;
+        }
+
+        try {
+            Path p = Paths.get(entitet.getStlOriginal());
+
+            if (!p.isAbsolute() || p.toFile().isDirectory()) {
+                throw new PrintAppException("Not a valid file path!");
+            }
+        } catch (NullPointerException e) {
+        }
+
+    }
+
+    private void controlStlSupported() throws PrintAppException {
+
+        if (entitet.getStlSupported() == null) {
+            return;
+        }
+
+        try {
+            Path p = Paths.get(entitet.getStlSupported());
+
+            if (!p.isAbsolute() || p.toFile().isDirectory()) {
+                throw new PrintAppException("Not a valid file path!");
+            }
+        } catch (NullPointerException e) {
+        }
+    }
+
+    private void controlSlicedFile() throws PrintAppException {
+
+        if (entitet.getSlicedFile() == null) {
+            return;
+        }
+
+        try {
+            Path p = Paths.get(entitet.getSlicedFile());
+
+            if (!p.isAbsolute() || p.toFile().isDirectory()) {
+                throw new PrintAppException("Not a valid file path!");
+            }
+        } catch (NullPointerException e) {
+        }
+
+    }
 
 }
