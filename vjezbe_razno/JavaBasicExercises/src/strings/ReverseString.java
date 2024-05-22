@@ -15,7 +15,7 @@ public class ReverseString {
 		inputString = s.next();
 		inputStringLength = inputString.length();
 		
-		for( int characterIndex = inputStringLength-1; characterIndex >=0; characterIndex--) {
+		for( int characterIndex = inputStringLength-1; characterIndex >=0; --characterIndex) {
 			sb.append(inputString.charAt(characterIndex));
 		}
 		
