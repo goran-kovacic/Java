@@ -20,6 +20,8 @@ public class ReverseString {
 		}
 		
 		System.out.println("Reverse String: " + sb);
+
+		s.close();
 		
 	}
 

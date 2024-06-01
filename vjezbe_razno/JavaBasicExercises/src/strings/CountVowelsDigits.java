@@ -1,6 +1,5 @@
 package strings;
 
-import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class CountVowelsDigits {
@@ -12,8 +11,7 @@ public class CountVowelsDigits {
 		System.out.println("Enter a string: ");
 		inputString = s.next().toLowerCase().trim();
 		
-		System.out.println(inputString);
-		
+		System.out.println(inputString);		
 		
 		char[] c = inputString.toCharArray();
 		
@@ -21,10 +19,8 @@ public class CountVowelsDigits {
 		int vowelCounter = 0;
 		int digitsCounter = 0;
 		
-		for (char d : c) {
-			
-			
-			
+		for (char d : c) {		
+						
 			if(Character.isDigit(d)) {
 				digitsCounter++;
 			}
@@ -42,10 +38,8 @@ public class CountVowelsDigits {
 		System.out.printf("number of vowels: %d (%.2f %%)", vowelCounter, vowels);
 		System.out.println();
 		System.out.printf("number of digits: %d (%.2f %%)", digitsCounter, digits );
-		
-		
-		
-		
+
+		s.close();	
 	}
 
 }
